@@ -16,7 +16,7 @@ const MainContent = () => {
         <div className="flex gap-x-4 items-start">
             <div className="w-[296px] overflow-hidden">
                 <div className="relative">
-                    <div className="max-h-[616px] overflow-y-auto overflow-x-hidden">
+                    <div className="h-[616px] overflow-y-auto overflow-x-hidden">
                         {showAddForm && (
                             <AddForm handleAddFormToggle={handleAddFormToggle} />
                         )}
