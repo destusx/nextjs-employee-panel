@@ -13,7 +13,7 @@ type State = {
 };
 
 type Action = {
-    onAddEmployee: (newEmployee: IEmployeeData) => void;
+    addEmployee: (newEmployee: IEmployeeData) => void;
     setPosition: (position: State['position']) => void;
     setSalary: (salary: State['salary']) => void;
     setSelectedTask: (id: number, task: ITask) => void;
@@ -32,7 +32,7 @@ export const useEmployeeStore = create<IEmployeeStore>()(set => ({
     selectedEmployee: null,
     selectedTack: null,
 
-    onAddEmployee: newEmployee =>
+    addEmployee: newEmployee =>
         set(state => ({
             employees: [...state.employees, newEmployee],
         })),

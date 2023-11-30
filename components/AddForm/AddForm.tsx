@@ -8,7 +8,7 @@ interface IAddFormProps {
 }
 
 const AddForm = ({ handleAddFormToggle }: IAddFormProps) => {
-    const { employees, position, salary, onAddEmployee, setPosition, setSalary } =
+    const { employees, position, salary, addEmployee, setPosition, setSalary } =
         useEmployeeStore(state => state);
 
     const handleAddEmployee = (e: React.FormEvent) => {
@@ -27,7 +27,7 @@ const AddForm = ({ handleAddFormToggle }: IAddFormProps) => {
             salary,
         };
 
-        onAddEmployee(newEmployee);
+        addEmployee(newEmployee);
         handleAddFormToggle();
         setPosition('');
         setSalary(0);

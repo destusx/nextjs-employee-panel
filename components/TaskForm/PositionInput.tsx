@@ -5,6 +5,10 @@ const PositionInput = () => {
         state => state
     );
 
+    const inputValue = selectedEmployee
+        ? selectedEmployee.position
+        : 'Выберите карточку';
+
     const currEmployeePosition = employees.find(item => {
         return item.id === selectedEmployee?.id;
     });
@@ -21,7 +25,7 @@ const PositionInput = () => {
                 className="bg-base-bg-color w-full py-3.5 px-4 border-2 border-base-border-color rounded-lg text-sm font-semibold text-white"
                 id="position"
                 type="text"
-                value={currEmployeePosition?.position}
+                value={inputValue}
                 onChange={e => setPositionName(e.target.value)}
             />
         </div>
